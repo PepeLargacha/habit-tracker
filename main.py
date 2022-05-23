@@ -1,10 +1,11 @@
-from twilio.rest import Client
-import tkinter
-import os
+"""Main Script"""
 
-TWILIO_AUTH = os.environ.get('TWILIO_AUTH')
-gui = tkinter.Tk()
+import datetime
+from pixela_user import delet_pixel
 
-gui.mainloop()
+GRAPH_ID = 'graph1'
+# graph_unit = 'min'
+# graph_unit_type = 'int'
+today = datetime.datetime.now().date()
 
-client = Client('a9012830129810941', TWILIO_AUTH)
+delet_pixel(GRAPH_ID, today)
